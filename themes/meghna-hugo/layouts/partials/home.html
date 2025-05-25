@@ -1,0 +1,31 @@
+{{ $data := index site.Data site.Language.Lang }} {{ if
+$data.home.home.enable }} {{ with $data.home.home }} {{"<!-- Welcome Slider-->"
+| safeHTML}}
+<section
+  id="home"
+  class="home" {{ partial `bg-image.html` (dict `Src` .bg_image_webp) | safeHTMLAttr }}
+>
+  {{ partial "image" (dict "Src" .bg_image_webp "Alt"
+  .Title "Class" "d-none") }}
+
+  <div class="block">
+    {{ if .icon }}
+    <div class="video-button">
+      <i class="{{ .icon }}"></i>
+    </div>
+    {{ end }}
+    <h1 class="animate-title">
+      {{ range $index, $char := split .title "" }}
+        <span style="--char-index: {{ $index }}">{{ $char }}</span>
+      {{ end }}
+    </h1>
+    <p class="animate-content">{{ .content | markdownify }}</p>
+  </div>
+
+  {{ if .button.enable }} {{ with .button }}
+  <div class="home-button-wrapper">
+    <a href="{{ .link }}" class="btn btn-primary btn-animate page-scroll">{{ .label }}</a>
+  </div>
+  {{ end }} {{ end }}
+</section>
+{{"<!-- /Welcome Slider-->" | safeHTML}} {{end}} {{end}}

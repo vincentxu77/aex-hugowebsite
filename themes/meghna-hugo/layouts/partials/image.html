@@ -1,0 +1,9 @@
+{{ $src := .Src }}
+{{ $alt := .Alt }}
+{{ $class := .Class }}
+
+{{ if findRE "^http" $src }}
+<img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ else }}
+<img src="{{ $src | relURL }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ end }} 

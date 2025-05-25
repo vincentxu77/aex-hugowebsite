@@ -52,44 +52,59 @@
           {{ else }}
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link {{ if eq .Name "Home" }}scroll-to-top{{ end }}"
               {{if
               findRE
               `^http`
               .URL}}target="_blank"
               rel="noopener"
               {{end}}
-              href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}"
+              href="{{if eq .Name "Home"}}#home{{else}}{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}{{end}}"
               >{{.Name}}</a
             >
           </li>
           {{ end }} {{ end }}
         </ul>
-        <!-- Language List -->
-        {{- if hugo.IsMultilingual }}
-        <select id="select-language" onchange="location = this.value;">
-          {{ $siteLanguages := site.Languages }} {{ $pageLang := .Page.Lang }}
-          {{ range .Page.AllTranslations }} {{ $translation := . }} {{ range
-          $siteLanguages }} {{ if eq $translation.Lang .Lang }} {{ $selected :=
-          false }} {{ if eq $pageLang .Lang }}
-          <option
-            id="{{ $translation.Language }}"
-            value="{{ $translation.Permalink }}"
-            selected
-          >
-            {{ .LanguageName }}
-          </option>
-          {{ else }}
-          <option
-            id="{{ $translation.Language }}"
-            value="{{ $translation.Permalink }}"
-          >
-            {{ .LanguageName }}
-          </option>
-          {{ end }} {{ end }} {{ end }} {{ end }}
-        </select>
-        {{ end }}
+        <!-- 语言切换按钮 -->
+        <div class="language-switch">
+          <a href="#" class="lang-btn" onclick="switchLanguage()">
+            {{ $icon := resources.Get "images/icons/language.svg" }}
+            <img src="{{ $icon.RelPermalink }}" alt="language" class="lang-icon">
+          </a>
+        </div>
       </div>
     </nav>
   </div>
 </section>
+
+<script>
+function switchLanguage() {
+  const currentLang = '{{ .Site.Language.Lang }}';
+  const currentPath = window.location.pathname;
+  const newLang = currentLang === 'en' ? 'hk' : 'en';
+  
+  // 移除当前语言前缀
+  let newPath = currentPath.replace(/^\/(en|hk)/, '');
+  // 添加新语言前缀
+  newPath = '/' + newLang + newPath;
+  
+  window.location.href = newPath;
+}
+
+// 平滑滚动到顶部
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopLinks = document.querySelectorAll('.scroll-to-top');
+  scrollToTopLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const scrollOptions = {
+        top: 0,
+        behavior: 'smooth'
+      };
+      window.scrollTo(scrollOptions);
+      return false;
+    });
+  });
+});
+</script>

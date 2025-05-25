@@ -1,0 +1,12 @@
+############################### home ################################
+home:
+  enable : true
+  bg_image_webp : "images/backgrounds/home.webp"
+  bg_image : "images/backgrounds/home.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "AEX MARKETS - 让市场更高效"
+  content : "AEX 致力于助力在中国打造成功的碳排放和电力远期市场!"
+  button:
+    enable : true
+    label : "了解更多"
+    link : "#about"

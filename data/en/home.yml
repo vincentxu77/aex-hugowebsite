@@ -1,0 +1,12 @@
+############################### home ################################
+home:
+  enable : true
+  bg_image_webp : "images/backgrounds/home.webp"
+  bg_image : "images/backgrounds/home.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "AEX MARKETS THAT WORK"
+  content : "AEX is committed to help create a successful forward market for emissions and power in China!"
+  button:
+    enable : true
+    label : "Learn More"
+    link : "#about"

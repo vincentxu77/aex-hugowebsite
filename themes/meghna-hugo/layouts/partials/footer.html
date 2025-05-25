@@ -51,11 +51,13 @@
 	(function ($) {
 		const cookieBox = document.getElementById('js-cookie-box');
 		const cookieButton = document.getElementById('js-cookie-button');
+		const cookieExpireDays = {{ site.Params.cookies.expire_days | default 365 }};
+		
 		if (!Cookies.get('cookie-box')) {
 			cookieBox.classList.remove('cookie-box-hide');
 			cookieButton.onclick = function () {
 				Cookies.set('cookie-box', true, {
-					expires: {{ site.Params.cookies.expire_days }}
+					expires: cookieExpireDays
 				});
 				cookieBox.classList.add('cookie-box-hide');
 			};

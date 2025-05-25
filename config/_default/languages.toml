@@ -10,13 +10,13 @@ copyright = "Copyright &copy; 2025 Designed & Developed by aex"
 
 
 
-################################### French language #####################################
-[fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
+################################### chinese language #####################################
+[hk]
+languageName = "hk"
+languageCode = "zh-hk"
+contentDir = "content/chinese"
 weight = 2
-[fr.params]
+[hk.params]
 home = "Accueil"
 copyright = "Copyright &copy; 2025 Designed & Developed by aex"
 

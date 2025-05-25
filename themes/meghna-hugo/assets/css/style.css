@@ -8,15 +8,16 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 */
 /*=== MEDIA QUERY ===*/
 html {
-  background-color: #353b43;
-  color: #737f8a;
+  background-color: #f5f7f6;
+  color: #4a4a4a;
 }
 
 body {
-  background-color: #353b43;
+  background-color: #f0f5f3;
   font-family: "Anaheim", sans-serif;
-  color: #737f8a;
+  color: #4a4a4a;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.8;
 }
 
 h1,
@@ -25,9 +26,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Quattrocento Sans", sans-serif;
-  color: #afbac4;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
 }
 
 p {
@@ -48,16 +50,16 @@ pre {
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
-  background: #57cbcc;
+  background: #4CAF50;
 }
 
 ::selection {
   color: #fff;
-  background: #57cbcc;
+  background: #4CAF50;
 }
 
 hr {
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 figure {
@@ -82,7 +84,7 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #6CB670;
+  color: #4CAF50;
 }
 
 .kill-margin-bottom {
@@ -110,18 +112,18 @@ a:hover {
 }
 
 .btn-transparent {
-  border: 1px solid #4e595f;
+  border: 1px solid #4CAF50;
 }
 
 .btn-transparent:hover,
 .btn-transparent:focus {
-  background-color: #57cbcc;
+  background-color: #4CAF50;
   border: 1px solid transparent;
   color: #fff;
 }
 
 .border-meghna {
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
+  border-top: 2px solid rgba(76, 175, 80, 0.2);
   height: 1px;
   margin: 15px auto 0;
   position: relative;
@@ -129,7 +131,7 @@ a:hover {
 }
 
 .border-meghna:before {
-  background-color: #fff;
+  background-color: #4CAF50;
   content: '';
   height: 6px;
   left: 50%;
@@ -137,11 +139,10 @@ a:hover {
   position: absolute;
   top: -4px;
   width: 50px;
-  background-color: #57cbcc;
 }
 
 .color {
-  color: #6CB670;
+  color: #4CAF50;
 }
 
 .sub-title {
@@ -163,18 +164,15 @@ a:hover {
 }
 
 .bg-one {
-  background-color: #353b43;
+  background-color: #f0f5f3;
 }
 
 .bg-dark {
-  background: #242930;
+  background: #e8f0ed;
 }
 
 .parallax-section {
-  background-attachment: fixed !important;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(135deg, #f5f7f6 0%, #e8f0ed 100%);
 }
 
 .no-padding {
@@ -215,22 +213,29 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #57cbcc;
+  color: #4CAF50;
 }
 
 .btn-main {
-  background: #57cbcc;
+  background-color: #4CAF50;
   color: #fff;
   display: inline-block;
   font-size: 14px;
   letter-spacing: 1px;
-  padding: 10px 35px;
+  padding: 12px 35px;
   text-transform: uppercase;
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
 }
 
 .btn-main:hover {
-  background: #2c9091;
+  background-color: #45a049;
   color: #fff;
+  border: 1px solid #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
 }
 
 .mt-20 {
@@ -275,13 +280,6 @@ a:hover {
   outline: 0;
 }
 
-.parallax-section {
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .preloader {
   position: fixed;
   top: 0;
@@ -300,10 +298,22 @@ a:hover {
 }
 
 .title h2 {
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 38px;
-  color: #fff;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.title h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #4CAF50;
 }
 
 .title h2 span {
@@ -382,6 +392,7 @@ a:hover {
 .logo {
   margin-top: 10px;
   display: inline-block;
+  margin-left: 0;
 }
 
 .single-page-header {
@@ -407,16 +418,63 @@ a:hover {
   Navigation
 ==================================================================*/
 .navigation {
-  background-color: #1d2024;
+  background-color: rgba(240, 245, 243, 0.98);
   width: 100%;
   margin-bottom: 0;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  padding: 10px 0;
+}
+
+.navigation .container {
+  padding: 0;
+  max-width: 100%;
+}
+
+.navigation .navbar {
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  display: inline-block;
+}
+
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #4CAF50;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show>.nav-link {
-  color: #57cbcc;
+  color: #4CAF50;
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: #4CAF50;
 }
 
 .navbar-toggler:focus {
@@ -434,7 +492,7 @@ a:hover {
   background-attachment: fixed;
 }
 
-.hero-area {
+.home {
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -443,9 +501,9 @@ a:hover {
   align-items: center;
 }
 
-.hero-area:before {
+.home:before {
   content: '';
-  background: rgba(0, 0, 0, 0.63);
+  /* background: rgba(255, 255, 255, 0.1); */
   position: absolute;
   top: 0;
   right: 0;
@@ -453,12 +511,12 @@ a:hover {
   left: 0;
 }
 
-.hero-area .block {
+.home .block {
   text-align: center;
   z-index: 99;
 }
 
-.hero-area .block .video-button {
+.home .block .video-button {
   background: #fff;
   color: #57cbcc;
   display: inline-block;
@@ -467,34 +525,36 @@ a:hover {
   border-radius: 50px;
 }
 
-.hero-area .block .video-button i {
+.home .block .video-button i {
   line-height: 60px;
   font-size: 20px;
   margin-left: 3px;
 }
 
-.hero-area .block h1 {
+.home .block h1 {
   font-size: 90px;
   color: #fff;
   text-transform: capitalize;
   font-weight: 700;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 480px) {
-  .hero-area .block h1 {
+  .home .block h1 {
     font-size: 60px;
   }
 }
 
-.hero-area .block p {
+.home .block p {
   color: #fff;
   font-size: 20px;
   width: 70%;
   margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.hero-area .block .btn-transparent {
+.home .block .btn-transparent {
   margin-top: 40px;
   border-color: #fff;
   padding: 14px 50px;
@@ -502,9 +562,10 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.hero-area-video {
+.home-video {
   height: 100vh;
   position: inherit !important;
   display: flex;
@@ -512,18 +573,18 @@ a:hover {
   align-items: center;
 }
 
-.hero-area-video .block {
+.home-video .block {
   color: #fff;
   text-align: center;
 }
 
-.hero-area-video .block h1 {
+.home-video .block h1 {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.hero-area-video .block p {
+.home-video .block p {
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
@@ -531,7 +592,7 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.hero-area-video .block .btn-main {
+.home-video .block .btn-main {
   margin-top: 20px;
 }
 
@@ -547,15 +608,18 @@ a:hover {
   About us section
 ==================================================================*/
 .about .block {
-  background: #242930;
-  padding: 30px;
-  border-bottom: 2px solid transparent;
-  transition: .5s all;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border: none;
   margin-bottom: 20px;
 }
 
 .about .block:hover {
-  border-bottom: 2px solid #57cbcc;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .about .block:hover .icon-box {
@@ -572,13 +636,14 @@ a:hover {
   padding: 20px 0;
   border-left: 2px solid rgba(236, 239, 241, 0.07);
   border-right: 2px solid rgba(236, 239, 241, 0.07);
-  font-size: 50px;
+  font-size: 40px;
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
   transition-duration: 0.3s;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
+  color: #4CAF50;
 }
 
 .about .block .icon-box:after,
@@ -693,16 +758,17 @@ a:hover {
 }
 
 .form-meghna .form-control {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 5px 10px;
-  color: #ddd;
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  background-color: #ffffff;
+  border: 1px solid rgba(76, 175, 80, 0.1);
+  border-radius: 4px;
+  padding: 12px 15px;
+  color: #4a4a4a;
+  transition: all 0.3s ease;
 }
 
 .form-meghna .form-control:focus {
-  border-color: none;
-  box-shadow: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
 .form-meghna input:hover,
@@ -946,11 +1012,18 @@ a:hover {
   Services section
 ==================================================================*/
 .service-block {
-  padding: 60px 20px;
-  border-left: 1px solid rgba(236, 239, 241, 0.07);
-  border-top: 1px solid rgba(236, 239, 241, 0.07);
-  margin-bottom: 40px;
-  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
+  padding: 40px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.service-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .service-block .service-icon {
@@ -1252,7 +1325,7 @@ a:hover {
 /*=================================================================
   Single Blog Page
 ==================================================================*/
-#blog-banner {
+#blog-home {
   padding-bottom: 100px;
   padding-top: 150px;
 }
@@ -1508,7 +1581,8 @@ input#e-mail,
   Footer section
 ==================================================================*/
 .social-icon {
-  padding: 60px 0 35px;
+  padding: 40px 0;
+  background: #e8f0ed;
 }
 
 .social-icon ul {
@@ -1520,16 +1594,16 @@ input#e-mail,
 }
 
 .social-icon ul li a {
-  background-color: #26292e;
-  border: 1px solid transparent;
-  display: block;
-  height: 70px;
-  width: 70px;
-  transition: all 400ms ease-out 0s;
+  background-color: #fff;
+  border: 1px solid rgba(76, 175, 80, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .social-icon ul li a:hover {
-  background: #57cbcc;
+  background: #4CAF50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
 }
 
 .social-icon ul li a:hover i {
@@ -1605,7 +1679,7 @@ input#e-mail,
 /*=================================================================
 	Blog Page
 ==================================================================*/
-#blog-banner {
+#blog-home {
   padding-bottom: 100px;
   padding-top: 150px;
 }
@@ -2296,4 +2370,56 @@ figcaption {
 
 .cookie-box-hide {
   display: none;
+}
+
+/* 更新滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8f0ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+}
+
+/* 添加渐变背景 */
+.parallax-section {
+  background: linear-gradient(135deg, #f5f7f6 0%, #e8f0ed 100%);
+}
+
+/* 更新卡片背景 */
+.card, 
+.portfolio-block,
+.team-member,
+.post-block {
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* 更新表单背景 */
+.form-meghna .form-control {
+  background-color: #ffffff;
+  border: 1px solid rgba(76, 175, 80, 0.1);
+  border-radius: 4px;
+  padding: 12px 15px;
+  color: #4a4a4a;
+  transition: all 0.3s ease;
+}
+
+/* 更新导航栏背景 */
+.navigation {
+  background-color: rgba(240, 245, 243, 0.98);
+  width: 100%;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  padding: 10px 0;
 }

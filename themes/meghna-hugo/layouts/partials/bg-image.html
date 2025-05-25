@@ -1,0 +1,6 @@
+{{ $src := .Src }}
+{{ if findRE "^http" $src }}
+style="background-image: url('{{ $src }}')"
+{{ else }}
+style="background-image: url('{{ $src | relURL }}')"
+{{ end }} 
