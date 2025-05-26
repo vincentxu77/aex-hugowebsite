@@ -342,7 +342,6 @@ a:hover {
 
 .overly:before {
   content: '';
-  background: rgba(0, 0, 0, 0.096);
   position: absolute;
   top: 0;
   right: 0;
@@ -1185,9 +1184,6 @@ a:hover {
 /*=================================================================
   Testimonial section
 ==================================================================*/
-.testimonial:before {
-  background: rgba(42, 48, 55, 0.7);
-}
 
 .client-info {
   margin: 0 auto;

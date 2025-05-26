@@ -3,14 +3,14 @@ about:
   enable : true
   title : About Us
   about_item :
-  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-    title : We're Creative
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
   - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Standards
+    content : We establish a transparent and neutral forward trading platform that adheres to international standards and regulatory requirements, ensuring fair and efficient market operations.
+
+  - icon : ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
+    title : Analytics
+    content : We deliver powerful data analytics services that enhance market transparency and empower participants with actionable insights through advanced tools.
 
   - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    title : Expertise
+    content : We facilitate strong partnerships between international markets and China, sharing best practices in trading strategies and risk management methodologies.

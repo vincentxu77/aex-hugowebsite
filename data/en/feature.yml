@@ -3,25 +3,25 @@ feature:
   enable : true
   image : images/about/about-business-man.jpg
   image_webp : images/about/about-business-man.webp
-  title : We’re A Digital Design Agency.
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi."
+  title : China's Emissions & Power Market
+  content : "AEX is committed to help build this ecosystem to contribute to the success of China emissions and power markets. In mature emissions and power markets, the spot market is embedded in an ecosystem that enables market participants to manage risk and run efficient trading operations."
   feature_item : 
       # feature item loop
-    - title : SEO Optimized
-      icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : Advanced Data Analytics
+      icon : ti-stats-up
+      content : Comprehensive data analytics and best practices for trading and risk management, enabling informed decision-making and optimal market performance
       
       # feature item loop
-    - title : Easy Customization
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
-
-      # feature item loop
-    - title : SEO Optimized
-      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : Forward Market Expertise
+      icon : ti-world
+      content : Development of robust and liquid forward markets, regulated to international standards, providing essential risk management tools
       
       # feature item loop
-    - title : Easy Customization
-      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : Risk Management Solutions
+      icon : ti-panel
+      content : Sophisticated risk management tools and strategies to help market participants navigate complex emissions and power markets effectively
+      
+      # feature item loop
+    - title : Market Integration
+      icon : ti-announcement
+      content : Seamless integration of spot and forward markets, creating a comprehensive ecosystem for efficient trading operations

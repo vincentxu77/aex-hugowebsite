@@ -5,22 +5,14 @@ testimonial:
   bg_image_webp : images/backgrounds/team-base-map.webp
   testimonial_item :
     # testimonial item loop
-    - name : Jonathon Andrew
-      image : images/client/client-1.jpg
-      image_webp : images/client/client-1.webp
-      date : Dec 26, 2018
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
+    - name : Complete Traceability System
+      image : images/client/block-chain.jpg
+      image_webp : images/client/block-chain.webp
+      content : Comprehensive and credible traceability measures throughout the entire lifecycle. Registration, verification, issuance, disclosure, trading, and retirement are all traceable. The entire transaction process is transparent, with verifiable nodes at every step.
       
     # testimonial item loop
-    - name : Mark Dinn
-      image : images/client/client-2.jpg
-      image_webp : images/client/client-2.webp
-      date : Dec 26, 2018
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
-      
-    # testimonial item loop
-    - name : Lemos Kail
-      image : images/client/client-1.jpg
-      image_webp : images/client/client-1.webp
-      date : Dec 26, 2018
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
+    - name : Multi-System Verification
+      image : images/client/recs.jpg
+      image_webp : images/client/recs.webp
+      content : Synchronized verification with domestic energy-saving certificates, national grid certificates, APX certificates, and I-REC data. Each green certificate is unique, authentic, and credible, effectively preventing double-counting of green attributes. The system meets requirements for identity privacy, cross-border transactions, and asset ownership verification.
+     

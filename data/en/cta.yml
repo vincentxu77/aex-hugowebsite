@@ -3,9 +3,9 @@ cta:
   enable : true
   bg_image : "images/backgrounds/transition-base-map.jpg"
   bg_image_webp : "images/backgrounds/transition-base-map.webp"
-  title : "Great Design & Incredible Features"
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+  title : "Building China's Energy Trading Future"
+  content : "We are committed to creating a transparent and regulated forward market for emissions and power trading in China, bringing international standards and best practices to empower market participants."
   button:
     enable : true
-    label : "Start a project with us"
-    link : "#contact"
+    label : "Experience our market"
+    link : "https://vincentxu77.github.io/H-REC-T-frontend/"
