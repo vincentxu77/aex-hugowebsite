@@ -1,4 +1,5 @@
 ################################# Default configuration ###################
+# baseURL = "/aex-website/"
 baseURL = "/"
 title = "aex"
 theme = "meghna-hugo"

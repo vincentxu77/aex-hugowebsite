@@ -1,4 +1,4 @@
-<section class="sticky-top navigation">
+<section class="sticky-top navigation" id="mainNav">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand p-0" href="{{ .Site.BaseURL | relLangURL }}">
@@ -78,6 +78,65 @@
 </section>
 
 <script>
+// 设置导航栏颜色和背景的函数
+function updateNavbarStyle() {
+    const nav = document.getElementById('mainNav');
+    const scrollPosition = window.scrollY;
+    const maxScroll = window.innerHeight * 0.7; // 70vh
+    
+    // 计算透明度，从0.2开始，最大到0.98
+    const opacity = 0.2 + (Math.min(scrollPosition / maxScroll, 1) * 0.78);
+    
+    // 设置导航栏背景色
+    nav.style.backgroundColor = `rgba(240, 245, 243, ${opacity})`;
+
+    // 设置导航栏选中项和未选中项的颜色
+    const activeLink = document.querySelector('.navbar-dark .navbar-nav .nav-link.active');
+    const inactiveLinks = document.querySelectorAll('.navbar-dark .navbar-nav .nav-link:not(.active)');
+    
+    if (scrollPosition >= maxScroll) {
+        // 滚动超过70vh时
+        if (activeLink) {
+            activeLink.style.setProperty('color', '#4CAF50', 'important');
+        }
+        inactiveLinks.forEach(link => {
+            link.style.setProperty('color', '#000', 'important');
+        });
+    } else {
+        // 滚动小于70vh时
+        if (activeLink) {
+            activeLink.style.setProperty('color', '#00ff0a', 'important');
+        }
+        inactiveLinks.forEach(link => {
+            link.style.setProperty('color', '#000', 'important');
+        });
+    }
+}
+
+// 监听滚动事件
+window.addEventListener('scroll', updateNavbarStyle);
+
+// 页面加载时立即执行一次
+document.addEventListener('DOMContentLoaded', function() {
+    // 立即执行一次
+    updateNavbarStyle();
+    
+    // 平滑滚动到顶部
+    const scrollToTopLinks = document.querySelectorAll('.scroll-to-top');
+    scrollToTopLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const scrollOptions = {
+                top: 0,
+                behavior: 'smooth'
+            };
+            window.scrollTo(scrollOptions);
+            return false;
+        });
+    });
+});
+
 function switchLanguage() {
   const currentLang = '{{ .Site.Language.Lang }}';
   const currentPath = window.location.pathname;
@@ -90,21 +149,4 @@ function switchLanguage() {
   
   window.location.href = newPath;
 }
-
-// 平滑滚动到顶部
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollToTopLinks = document.querySelectorAll('.scroll-to-top');
-  scrollToTopLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const scrollOptions = {
-        top: 0,
-        behavior: 'smooth'
-      };
-      window.scrollTo(scrollOptions);
-      return false;
-    });
-  });
-});
 </script>

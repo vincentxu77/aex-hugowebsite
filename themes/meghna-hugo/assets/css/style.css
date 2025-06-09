@@ -272,6 +272,7 @@ a:hover {
 
 #home {
   position: relative;
+  padding-top: 80px;
 }
 
 .btn.active:focus,
@@ -417,12 +418,21 @@ a:hover {
   Navigation
 ==================================================================*/
 .navigation {
-  background-color: rgba(240, 245, 243, 0.98);
+  background-color: rgba(240, 245, 243, 0.2);
   width: 100%;
   margin-bottom: 0;
   border-bottom: 1px solid rgba(76, 175, 80, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   padding: 10px 0;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.navigation.navbar-scrolled {
+  background-color: rgba(240, 245, 243, 0.98);
 }
 
 .navigation .container {
@@ -2412,10 +2422,19 @@ figcaption {
 
 /* 更新导航栏背景 */
 .navigation {
-  background-color: rgba(240, 245, 243, 0.98);
+  background-color: rgba(240, 245, 243, 0.2);
   width: 100%;
   margin-bottom: 0;
   border-bottom: 1px solid rgba(76, 175, 80, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   padding: 10px 0;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.navigation.navbar-scrolled {
+  background-color: rgba(240, 245, 243, 0.98);
 }

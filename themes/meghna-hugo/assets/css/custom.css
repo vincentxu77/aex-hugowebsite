@@ -690,3 +690,7 @@
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.95);
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #00ff0a !important;
+}
+
