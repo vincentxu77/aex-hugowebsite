@@ -1,35 +1,172 @@
 {{ $data := index site.Data site.Language.Lang }} {{ if $data.about.about.enable
 }} {{ with $data.about.about }} {{"<!-- Start About Section -->" | safeHTML}}
-<section class="bg-one about section" id="about">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        {{"<!-- section title -->" | safeHTML}}
-        <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
-          <h2>
-            {{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end
-            }}<span class="color">
-              {{ with .title }} {{ index (split . " ") 1 | safeHTML }} {{ end }}
-            </span>
-          </h2>
-          <div class="border-meghna"></div>
+<section class="bg-one about section" id="about" style="padding-bottom: 0px;">
+  {{ $worldMap := resources.Get "images/about/worldMap.png" }}
+  {{ $hex1 := resources.Get "images/icons/liubianxing01.svg" }}
+  {{ $hex2 := resources.Get "images/icons/liubianxing02.svg" }}
+  {{ $hex3 := resources.Get "images/icons/liubianxing03.svg" }}
+  <style>
+    .about-section-bg-wrap {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      overflow-x: hidden;
+      background: transparent;
+    }
+    .about-items-bg {
+      background: url('{{ $worldMap.RelPermalink }}') no-repeat center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100vw;
+      min-height: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 0;
+      border-radius: 12px;
+      box-sizing: border-box;
+      overflow-x: auto;
+    }
+    .about-items-inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(120px, 8vw, 230px);
+    }
+    .about-items-inner .col-lg-4 {
+      float: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      max-width: 350px;
+      min-width: 220px;
+      background: transparent;
+      border-radius: 8px;
+      padding: 0 0 32px 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .about-items-inner .col-lg-4 .block {
+      background: transparent;
+      border-radius: 8px;
+      padding: 0 24px 24px 24px;
+      width: 80%;
+    }
+    .about-items-inner .col-lg-4:nth-child(1)::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130%;
+      height: 130%;
+      background: url('{{ $hex1.RelPermalink }}') no-repeat center center;
+      background-size: contain;
+      z-index: -1;
+    }
+    .about-items-inner .col-lg-4:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130%;
+      height: 130%;
+      background: url('{{ $hex2.RelPermalink }}') no-repeat center center;
+      background-size: contain;
+      z-index: -1;
+    }
+    .about-items-inner .col-lg-4:nth-child(3)::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130%;
+      height: 130%;
+      background: url('{{ $hex3.RelPermalink }}') no-repeat center center;
+      background-size: contain;
+      z-index: -1;
+    }
+    .about-section-title {
+      max-width: 1200px;
+      margin: 0 auto 24px auto;
+      padding: 0 16px;
+    }
+    @media (max-width: 1300px) {
+      .about-items-inner {
+        max-width: 98vw;
+        gap: 24px;
+      }
+      .about-section-title {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 991px) {
+      .about-items-bg {
+        padding: 24px 0;
+      }
+      .about-items-inner {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .about-items-inner .col-lg-4 {
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+    @media (max-width: 600px) {
+      .about-items-bg {
+        padding: 12px 0;
+      }
+      .about-section-title {
+        padding: 0 4px;
+      }
+    }
+    .about-items-inner .col-lg-4 .icon-box {
+      margin-bottom: 0;
+    }
+  </style>
+  <div class="about-section-bg-wrap">
+    <div class="about-section-title">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          {{"<!-- section title -->" | safeHTML}}
+          <div class="text-center">
+            <h2>
+              {{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+                {{ with .title }} {{ index (split . " ") 1 | safeHTML }} {{ end }}
+              </span>
+            </h2>
+            <div class="border-meghna"></div>
+          </div>
         </div>
       </div>
-      {{"<!-- /section title -->" | safeHTML}} {{ range .about_item }} {{"<!-- About item -->"
-      | safeHTML}}
-      <div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
-        <div class="block">
-          <div class="icon-box">
-            {{with .icon}}<i class="{{ . }}"></i>{{ end }}
-          </div>
-          {{"<!-- Express About Yourself -->" | safeHTML}}
-          <div class="content text-center">
-            <h3>{{ .title }}</h3>
-            <p>{{ .content | markdownify }}</p>
+    </div>
+    <div class="about-items-bg">
+      <div class="about-items-inner">
+        {{ range .about_item }}
+        <div class="col-lg-4 text-center">
+          <div class="block">
+            <div class="icon-box">
+              {{with .icon}}<i class="{{ . }}"></i>{{ end }}
+            </div>
+            {{"<!-- Express About Yourself -->" | safeHTML}}
+            <div class="content text-center">
+              <p>{{ .content | markdownify }}</p>
+            </div>
           </div>
         </div>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
   </div>
 </section>

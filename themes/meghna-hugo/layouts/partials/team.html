@@ -19,8 +19,8 @@
       {{ range .team_member}}
       {{"<!-- team member -->" | safeHTML}}
       <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
-        <div class="team-member">
-          <div class="member-photo">
+        <div class="team-member" style="height: 100%; display: flex; flex-direction: column;">
+          <div class="member-photo" style="flex: 0 0 auto;">
             {{"<!-- member photo -->" | safeHTML}}
             {{ partial "image.html" (dict "Src" .image_webp "Alt" .name "Class" "img-fluid lozad" ) }}
             {{"<!-- member social profile -->" | safeHTML}}
@@ -34,10 +34,10 @@
           </div>
 
           {{"<!-- member name & designation -->" | safeHTML}}
-          <div class="member-meta">
+          <div class="member-meta" style="flex: 1 1 auto; display: flex; flex-direction: column;">
             <h4>{{ .name }}</h4>
             <span>{{ .designation | markdownify}}</span>
-            <p>{{ .content | markdownify }}</p>
+            <p style="flex: 1 1 auto;">{{ .content | markdownify }}</p>
           </div>
         </div>
       </div>

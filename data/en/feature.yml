@@ -1,27 +1,27 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/about-business-man.jpg
-  image_webp : images/about/about-business-man.webp
+  image : images/about/spotMarket.png
+  image_webp : images/about/spotMarket.png
   title : China's Emissions & Power Market
   content : "AEX is committed to help build this ecosystem to contribute to the success of China emissions and power markets. In mature emissions and power markets, the spot market is embedded in an ecosystem that enables market participants to manage risk and run efficient trading operations."
   feature_item : 
       # feature item loop
-    - title : Advanced Data Analytics
+    - title : Market Infrastructure
       icon : ti-stats-up
-      content : Comprehensive data analytics and best practices for trading and risk management, enabling informed decision-making and optimal market performance
+      content : Building robust market infrastructure to support spot and forward trading, ensuring efficient price discovery and market liquidity
       
       # feature item loop
-    - title : Forward Market Expertise
+    - title : Risk Management
       icon : ti-world
-      content : Development of robust and liquid forward markets, regulated to international standards, providing essential risk management tools
-      
-      # feature item loop
-    - title : Risk Management Solutions
-      icon : ti-panel
-      content : Sophisticated risk management tools and strategies to help market participants navigate complex emissions and power markets effectively
+      content : Developing comprehensive risk management tools and solutions to help market participants navigate market volatility and manage their positions effectively
       
       # feature item loop
     - title : Market Integration
+      icon : ti-panel
+      content : Creating seamless integration between spot and forward markets, enabling participants to optimize their trading strategies across different time horizons
+      
+      # feature item loop
+    - title : Market Intelligence
       icon : ti-announcement
-      content : Seamless integration of spot and forward markets, creating a comprehensive ecosystem for efficient trading operations
+      content : Providing advanced analytics and market insights to support informed decision-making and enhance trading efficiency

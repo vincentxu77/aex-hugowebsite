@@ -620,20 +620,9 @@ a:hover {
   background: #ffffff;
   padding: 40px 30px;
   border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
   border: none;
   margin-bottom: 20px;
-}
-
-.about .block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.about .block:hover .icon-box {
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
 }
 
 .about .block .icon-box {
