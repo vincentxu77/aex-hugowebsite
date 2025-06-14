@@ -1,7 +1,6 @@
 {{ $data := index site.Data site.Language.Lang }} {{ if $data.about.about.enable
 }} {{ with $data.about.about }} {{"<!-- Start About Section -->" | safeHTML}}
 <section class="bg-one about section" lang="{{ site.Language.Lang }}" id="about" style="padding-bottom: 0px;">
-  {{ $worldMap := resources.Get "images/about/worldMap.webp" }}
   {{ $hex1 := resources.Get "images/icons/liubianxing01.svg" }}
   {{ $hex2 := resources.Get "images/icons/liubianxing02.svg" }}
   {{ $hex3 := resources.Get "images/icons/liubianxing03.svg" }}
@@ -13,7 +12,7 @@
       background: transparent;
     }
     .about-items-bg {
-      background: url('{{ $worldMap.RelPermalink }}') no-repeat center center;
+      background: url('{{ "/images/about/worldMap.webp" | relURL }}') no-repeat center center;
       background-size: contain;
       background-repeat: no-repeat;
       width: 100%;

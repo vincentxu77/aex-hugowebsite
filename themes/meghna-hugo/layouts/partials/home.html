@@ -1,13 +1,13 @@
 {{ $data := index site.Data site.Language.Lang }} {{ if
 $data.home.home.enable }} {{ with $data.home.home }} {{"<!-- Welcome Slider-->"
 | safeHTML}}
-{{ $bg_image := resources.Get .bg_image_webp }}
-{{ $temp_bg_image := resources.Get .temp_bg_image_webp }}
+{{ $bg_image_webp := printf "/images/backgrounds/%s" (path.Base .bg_image_webp) | relURL }}
+{{ $temp_bg_image_webp := printf "/images/backgrounds/%s" (path.Base .temp_bg_image_webp) | relURL }}
 <section
   id="home"
   class="home" {{ partial `bg-image.html` (dict `Src` .temp_bg_image_webp) | safeHTMLAttr }}
-  data-bg-image="{{ if $bg_image }}{{ $bg_image.RelPermalink }}{{ else }}{{ .bg_image_webp | relURL }}{{ end }}"
-  data-temp-bg-image="{{ if $temp_bg_image }}{{ $temp_bg_image.RelPermalink }}{{ else }}{{ .temp_bg_image_webp | relURL }}{{ end }}"
+  data-bg-image="{{ $bg_image_webp }}"
+  data-temp-bg-image="{{ $temp_bg_image_webp }}"
 >
   {{ partial "image" (dict "Src" .bg_image_webp "Alt"
   .Title "Class" "d-none") }}
