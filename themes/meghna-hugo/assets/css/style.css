@@ -246,11 +246,6 @@ a:hover {
   padding: 80px 0;
 }
 
-@media (max-width: 480px) {
-  .section {
-    padding: 40px 0;
-  }
-}
 
 @media (max-width: 768px) {
   .section {
@@ -551,12 +546,6 @@ a:hover {
   font-weight: 700;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 480px) {
-  .home .block h1 {
-    font-size: 60px;
-  }
 }
 
 .home .block p {
@@ -2578,12 +2567,13 @@ figcaption {
   }
   
   .home-button-wrapper {
+    margin-top: 0px !important;
     position: relative !important;
     display: block !important;
     text-align: center !important;
     padding: 0 20px !important;
     overflow: hidden !important;
-    bottom: 100px !important;
+    bottom: 80px !important;
   }
   
   .home .btn {
@@ -2602,6 +2592,14 @@ figcaption {
   
   .navigation .navbar-toggler {
     padding: 0.25rem 0.5rem;
+  }
+
+  .form-meghna .form-control {
+    padding: 12px 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
   }
 }
 
@@ -2640,17 +2638,6 @@ img {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-/* 优化表单响应式 */
-@media (max-width: 768px) {
-  .form-meghna .form-control {
-    padding: 12px 15px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
 }
 
 /* 导航栏响应式优化 */
@@ -2753,10 +2740,6 @@ img {
   .home .block p {
     font-size: 15px;
     margin: 15px 0;
-  }
-  
-  .home-button-wrapper {
-    margin-top: 20px;
   }
 }
 
@@ -2914,5 +2897,23 @@ img {
   .btn-transparent {
     padding: 8px 20px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .home .block h1 {
+    font-size: 60px;
+  }
+
+  .home .block p {
+    margin-bottom: 80px !important;
+  }
+
+  .home-button-wrapper {
+    bottom: 55px !important;
   }
 }
