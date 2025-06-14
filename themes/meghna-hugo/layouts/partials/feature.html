@@ -2,8 +2,8 @@
 
 {{ if $data.feature.feature.enable }}
 {{ with $data.feature.feature }}
-{{ $staticImageWebPPath := printf "/images/about/%s" (path.Base .image_webp) | relURL }}
-{{ $staticImagePath := printf "/images/about/%s" (path.Base .image) | relURL }}
+{{ $staticImageWebPPath := printf "images/about/%s" (path.Base .image_webp) | relURL }}
+{{ $staticImagePath := printf "images/about/%s" (path.Base .image) | relURL }}
 {{"<!-- feature -->" | safeHTML}}
 <section class="section section-bg about-2 padding-0" id="feature">
     <div class="container-fluid">
