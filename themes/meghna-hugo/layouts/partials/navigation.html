@@ -157,24 +157,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function switchLanguage() {
-  const currentLang = '{{ .Site.Language.Lang }}';
   const currentPath = window.location.pathname;
-  const newLang = currentLang === 'en' ? 'hk' : 'en';
-  const baseURL = '{{ .Site.BaseURL }}';
-  
-  // 移除当前语言前缀和 baseURL
-  let newPath = currentPath.replace(/^\/(en|hk)/, '');
-  newPath = newPath.replace(baseURL, '');
-  
-  // 根据目标语言构建新路径
-  if (newLang === 'en') {
-    // 英文版本直接使用 baseURL
-    newPath = baseURL + newPath;
+  let newPath;
+
+  if (currentPath.includes('/hk/')) {
+    // If current path contains /hk/, remove it to switch to English
+    newPath = currentPath.replace('/hk/', '/');
+    // Ensure it doesn't create double slashes
+    if (newPath.startsWith('//')) {
+      newPath = newPath.substring(1);
+    }
   } else {
-    // 中文版本添加 /hk 前缀
-    newPath = baseURL + 'hk/' + newPath;
+    // If current path does not contain /hk/, add it to switch to Chinese (Hong Kong)
+    if (currentPath === '/' || currentPath === '') {
+      // 如果是根路径
+      newPath = '/hk/';
+    } else {
+      // 在第一个斜杠后添加 hk
+      const firstSlashIndex = currentPath.indexOf('/');
+      if (firstSlashIndex === 0) {
+        // 如果路径以斜杠开头
+        newPath = '/hk' + currentPath;
+      } else {
+        // 其他情况
+        newPath = '/hk/' + currentPath;
+      }
+    }
   }
   
-  window.location.href = newPath;
+  // 使用相对路径导航，避免添加域名和协议
+  window.location.pathname = newPath;
 }
 </script>
