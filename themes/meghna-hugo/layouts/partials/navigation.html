@@ -158,32 +158,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function switchLanguage() {
   const currentPath = window.location.pathname;
+  const baseURL = '{{ .Site.BaseURL }}'.replace(/\/$/, ''); // 获取站点基础URL，移除末尾斜杠
+  const baseURLWithoutSlash = baseURL.replace(/^\//,''); // 移除开头斜杠
   let newPath;
 
+  // 检查当前路径是否包含 /hk/
   if (currentPath.includes('/hk/')) {
-    // If current path contains /hk/, remove it to switch to English
+    // 如果包含 /hk/，移除它切换到英文
     newPath = currentPath.replace('/hk/', '/');
-    // Ensure it doesn't create double slashes
-    if (newPath.startsWith('//')) {
-      newPath = newPath.substring(1);
-    }
   } else {
-    // If current path does not contain /hk/, add it to switch to Chinese (Hong Kong)
-    if (currentPath === '/' || currentPath === '') {
+    // 如果当前路径不包含 /hk/，需要添加它切换到中文
+    // 首先检查当前路径是否包含 baseURL
+    if (baseURLWithoutSlash && currentPath.includes(baseURLWithoutSlash)) {
+      // 在 baseURL 后添加 hk
+      const pathAfterBase = currentPath.split(baseURLWithoutSlash)[1] || '';
+      newPath = '/' + baseURLWithoutSlash + '/hk' + (pathAfterBase.startsWith('/') ? pathAfterBase : '/' + pathAfterBase);
+    } else if (currentPath === '/' || currentPath === '') {
       // 如果是根路径
-      newPath = '/hk/';
+      newPath = baseURL ? baseURL + 'hk/' : '/hk/';
     } else {
-      // 在第一个斜杠后添加 hk
+      // 其他情况，尝试在第一个斜杠后添加 hk
       const firstSlashIndex = currentPath.indexOf('/');
       if (firstSlashIndex === 0) {
         // 如果路径以斜杠开头
-        newPath = '/hk' + currentPath;
+        const secondSlashIndex = currentPath.indexOf('/', 1);
+        if (secondSlashIndex !== -1) {
+          // 如果有第二个斜杠，在第二个斜杠后添加 hk
+          newPath = currentPath.substring(0, secondSlashIndex) + '/hk' + currentPath.substring(secondSlashIndex);
+        } else {
+          // 如果没有第二个斜杠，在第一个斜杠后添加 hk
+          newPath = '/hk' + currentPath;
+        }
       } else {
         // 其他情况
         newPath = '/hk/' + currentPath;
       }
     }
   }
+
+  // 确保没有多余的斜杠
+  newPath = newPath.replace(/\/\//g, '/');
   
   // 使用相对路径导航，避免添加域名和协议
   window.location.pathname = newPath;
