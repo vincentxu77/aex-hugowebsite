@@ -3,7 +3,7 @@
 {{ if $data.skill.skill.enable }}
 {{ with $data.skill.skill }}
 {{"<!-- Skills -->" | safeHTML }}
-<section id="skills" class="parallax-section section section-bg overly">
+<section id="skills" class="parallax-section section section-bg overly{{ if not $.IsHome }} lozad{{ end }}"{{ $skill_bg_src := or .bg_image .bg_image_webp }}{{ if $skill_bg_src }} {{ partial `bg-image.html` (dict `Src` $skill_bg_src `Page` $) | safeHTMLAttr }}{{ end }}>
 	<div class="container">
 		<div class="row">
 			{{"<!-- section title -->" | safeHTML }}

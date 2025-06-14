@@ -5,8 +5,8 @@ team:
   team_member :
     # team member loop
     - name : 黃傑夫
-      image_webp : images/team/jeff.jpg
-      image : images/team/jeff.jpg
+      image_webp : images/team/jeff.webp
+      image : images/team/jeff.webp
       designation : 首席執行官/創始人
       content : 曾任國際商品交易所大中華區董事總經理（2010-2016），芝加哥氣候交易所亞洲副總裁，重慶石油天然氣交易中心首席顧問。擁有10年以上跨境併購和合資企業經驗。粵港澳大灣區碳連接工作組成員。中國能源和二氧化碳市場知名專家。
       social :
@@ -21,8 +21,8 @@ team:
         
     # team member loop
     - name : Sam GreenWood
-      image_webp : images/team/sam.jpg
-      image : images/team/sam.jpg
+      image_webp : images/team/sam.webp
+      image : images/team/sam.webp
       designation : 項目經理
       content : 香港大學工商管理碩士。前美國軍人，力拓集團政府關係專家。CryptoBLK和BCW集團項目經理。Apogee Labs創始人，專注於企業區塊鏈應用和創業諮詢服務的web3諮詢公司。
       social :
@@ -37,8 +37,8 @@ team:
         
     # team member loop
     - name : 張繼東
-      image_webp : images/team/leo.jpg
-      image : images/team/leo.jpg
+      image_webp : images/team/leo.webp
+      image : images/team/leo.webp
       designation : 技術總監
       content : 擁有20年密碼算法、電子簽名、區塊鏈和碳信用REC專業經驗。北京工業大學碩士。中國科學院計算機網絡信息中心工程師。BJCA（創業板上市公司）創始成員。Ai-Got.com創始人兼首席執行官。TC260 WG4成員。硬件數字錢包"SIM-Key芯片"發明者。
       social :
@@ -53,8 +53,8 @@ team:
         
     # team member loop
     - name : 納傑安
-      image_webp : images/team/najiean.png
-      image : images/team/najiean.png
+      image_webp : images/team/najiean.webp
+      image : images/team/najiean.webp
       designation : 創始合夥人兼電力市場與數據分析副總裁
       content : 曾任瑞士發電商現貨電力交易員和資產經理。能源行業交易和風險管理高級顧問。前瑞士信貸投資銀行衍生品交易員。在上海和新加坡有5年工作經驗，精通中文。
       social :

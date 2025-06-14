@@ -1,8 +1,9 @@
 ################################# Default configuration ###################
 #baseURL = "/aex-website/"
- baseURL = "/"
+baseURL = "/"
 title = "aex"
 theme = "meghna-hugo"
+disableImageProcessing = true
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
 # post pagination
@@ -39,8 +40,6 @@ home = ["HTML", "RSS"]
 
 ############################# Imaging ##############################
 [imaging]
-quality = 90
-resampleFilter = "Lanczos"
 
 ############################# Caches ###############################
 [caches]
@@ -111,7 +110,7 @@ enable = false
 gmap_api = ""
 map_latitude = "51.5223477"
 map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
+map_marker = "images/marker.webp"
 
 ############################# social icons ##########################
 [[params.social]]

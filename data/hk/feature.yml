@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/spotMarket.jpg
-  image_webp : images/about/spotMarket.jpg
+  image : images/about/spotMarket.webp
+  image_webp : images/about/spotMarket.webp
   title : 中國碳排放與電力市場
   content : "AEX致力於幫助建立這個生態系統，為中國碳排放和電力市場的成功做出貢獻。在成熟的碳排放和電力市場中，現貨市場嵌入在一個生態系統中，使市場參與者能夠管理風險並運行高效的交易操作。"
   feature_item : 

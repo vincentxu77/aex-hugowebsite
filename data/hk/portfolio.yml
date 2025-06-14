@@ -5,7 +5,7 @@ portfolio:
   portfolio_item :
     # portfolio item loop
     - name : Tag Design
-      image : images/portfolio/portfolio-1.jpg
+      image : images/portfolio/portfolio-1.webp
       image_webp : images/portfolio/portfolio-1.webp
       categories : ["design"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -13,7 +13,7 @@ portfolio:
       
     # portfolio item loop
     - name : Sound system
-      image : images/portfolio/portfolio-2.jpg
+      image : images/portfolio/portfolio-2.webp
       image_webp : images/portfolio/portfolio-2.webp
       categories : ["development"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -21,7 +21,7 @@ portfolio:
       
     # portfolio item loop
     - name : Clock Product
-      image : images/portfolio/portfolio-3.jpg
+      image : images/portfolio/portfolio-3.webp
       image_webp : images/portfolio/portfolio-3.webp
       categories : ["design", "development"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -29,7 +29,7 @@ portfolio:
       
     # portfolio item loop
     - name : Bottol Label
-      image : images/portfolio/portfolio-4.jpg
+      image : images/portfolio/portfolio-4.webp
       image_webp : images/portfolio/portfolio-4.webp
       categories : ["photography", "development"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -37,7 +37,7 @@ portfolio:
       
     # portfolio item loop
     - name : Shopping Bag
-      image : images/portfolio/portfolio-5.jpg
+      image : images/portfolio/portfolio-5.webp
       image_webp : images/portfolio/portfolio-5.webp
       categories : ["design"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -45,7 +45,7 @@ portfolio:
       
     # portfolio item loop
     - name : Tag Design
-      image : images/portfolio/portfolio-6.jpg
+      image : images/portfolio/portfolio-6.webp
       image_webp : images/portfolio/portfolio-6.webp
       categories : ["photography"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,7 +53,7 @@ portfolio:
       
     # portfolio item loop
     - name : Business Card
-      image : images/portfolio/portfolio-7.jpg
+      image : images/portfolio/portfolio-7.webp
       image_webp : images/portfolio/portfolio-7.webp
       categories : ["development"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -61,7 +61,7 @@ portfolio:
       
     # portfolio item loop
     - name : Stationary Design
-      image : images/portfolio/portfolio-8.jpg
+      image : images/portfolio/portfolio-8.webp
       image_webp : images/portfolio/portfolio-8.webp
       categories : ["design", "development"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -69,7 +69,7 @@ portfolio:
       
     # portfolio item loop
     - name : Tag Design
-      image : images/portfolio/portfolio-2.jpg
+      image : images/portfolio/portfolio-2.webp
       image_webp : images/portfolio/portfolio-2.webp
       categories : ["design", "photography"]
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit.

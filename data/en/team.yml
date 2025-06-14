@@ -5,8 +5,8 @@ team:
   team_member :
     # team member loop
     - name : Jeff Huang
-      image_webp : images/team/jeff.jpg
-      image : images/team/jeff.jpg
+      image_webp : images/team/jeff.webp
+      image : images/team/jeff.webp
       designation : CEO/Founder
       content : Former Managing Director Greater China for international commodity exchange (2010-2016), VP Asia for Chicago Climate Exchange (CCX), Former Chief Advisor for Chongqing Gas Exchange. 10+ years experience in cross-border M&A and Joint Venture. Member of Greater-Bay Area (GBA) Carbon Connect Working Group. Well-known expert in China energy and CO2 markets.
       social :
@@ -21,8 +21,8 @@ team:
         
     # team member loop
     - name : Sam GreenWood
-      image_webp : images/team/sam.jpg
-      image : images/team/sam.jpg
+      image_webp : images/team/sam.webp
+      image : images/team/sam.webp
       designation : Program Manager
       content : MBA from University of Hong Kong. Former US military veteran and Rio Tinto government relations specialist. Program manager for CryptoBLK and BCW Group. Founder of Apogee Labs, a web3 consulting firm focusing on corporate blockchain adoption and startup advisory services.
       social :
@@ -37,8 +37,8 @@ team:
         
     # team member loop
     - name : Leo Zhang
-      image_webp : images/team/leo.jpg
-      image : images/team/leo.jpg
+      image_webp : images/team/leo.webp
+      image : images/team/leo.webp
       designation : Technical Director
       content : 20 years of expertise in cryptographic algorithms, electronic signatures, blockchain and carbon credits REC. Master of Beijing University of Technology. Engineer of Computer Network Information Center, Chinese Academy of Sciences. Founding member of BJCA (GEM listed company). Founder and CEO of Ai-Got.com. Member of TC260 WG4. Inventor of hardware digital wallet "SIM-Key Chip".
       social :
@@ -53,8 +53,8 @@ team:
         
     # team member loop
     - name : Jonas Nart
-      image_webp : images/team/najiean.png
-      image : images/team/najiean.png
+      image_webp : images/team/najiean.webp
+      image : images/team/najiean.webp
       designation : Founding Partner & VP Power Markets & Data Analytics
       content : Former spot power trader and asset manager for Swiss generator. Senior consultant in energy industry trading and risk management. Former derivatives trader for Credit Suisse Investment Banking. 5 years experience in Shanghai and Singapore with fluent Chinese proficiency.
       social :

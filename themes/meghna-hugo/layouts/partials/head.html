@@ -41,4 +41,11 @@
 	</script>
 	{{ end }}
 
+	{{ if not .IsHome }}
+	<script src="{{ `plugins/lazy-load/lozad.min.js` | absURL }}"></script>
+	<script>
+		const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+		observer.observe();
+	</script>
+	{{ end }}
 </head>

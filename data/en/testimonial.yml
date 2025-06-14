@@ -1,18 +1,18 @@
 ################################# Testimonial #########################
 testimonial:
   enable : true
-  bg_image : images/backgrounds/team-base-map.jpg
+  bg_image : images/backgrounds/team-base-map.webp
   bg_image_webp : images/backgrounds/team-base-map.webp
   testimonial_item :
     # testimonial item loop
     - name : Complete Traceability System
-      image : images/client/block-chain.jpg
+      image : images/client/block-chain.webp
       image_webp : images/client/block-chain.webp
       content : Comprehensive and credible traceability measures throughout the entire lifecycle. Registration, verification, issuance, disclosure, trading, and retirement are all traceable. The entire transaction process is transparent, with verifiable nodes at every step.
       
     # testimonial item loop
     - name : Multi-System Verification
-      image : images/client/recs.jpg
+      image : images/client/recs.webp
       image_webp : images/client/recs.webp
       content : Synchronized verification with multiple certificate systems including domestic energy-saving certificates and I-REC data. Each green certificate is unique and authentic, preventing double-counting while ensuring privacy and cross-border transaction capabilities.
      

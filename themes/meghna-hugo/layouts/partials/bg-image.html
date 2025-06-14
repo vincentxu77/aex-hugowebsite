@@ -1,6 +1,24 @@
 {{ $src := .Src }}
-{{ if findRE "^http" $src }}
-style="background-image: url('{{ $src }}')"
+{{ $is_home_page := .Page.IsHome }}
+{{/* If .Page is not passed, default to checking $.IsHome, or assume not home if unsure for safety of applying lazyload */}}
+{{ if .Page }}
+  {{ $is_home_page = .Page.IsHome }}
+{{ else if $ }}
+  {{ $is_home_page = $.IsHome }}
+{{ end }}
+
+{{ if not $is_home_page }}
+  {{/* For non-home pages, use data-background-image for lozad */}}
+  {{ if findRE "^http" $src }}
+    style="background-image: url('{{ $src }}')" {{/* Remote images still direct */}}
+  {{ else if $src }}
+    data-background-image="{{ $src | relURL }}"
+  {{ end }}
 {{ else }}
-style="background-image: url('{{ $src | relURL }}')"
-{{ end }} 
+  {{/* For home page, set style directly as lozad script is not loaded */}}
+  {{ if findRE "^http" $src }}
+    style="background-image: url('{{ $src }}')"
+  {{ else if $src }}
+    style="background-image: url('{{ $src | relURL }}')"
+  {{ end }}
+{{ end }}

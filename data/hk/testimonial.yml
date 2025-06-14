@@ -1,17 +1,17 @@
 ################################# Testimonial #########################
 testimonial:
   enable : true
-  bg_image : images/backgrounds/team-base-map.jpg
+  bg_image : images/backgrounds/team-base-map.webp
   bg_image_webp : images/backgrounds/team-base-map.webp
   testimonial_item :
     # testimonial item loop
     - name : 完整追溯系統
-      image : images/client/block-chain.jpg
+      image : images/client/block-chain.webp
       image_webp : images/client/block-chain.webp
       content : 貫穿整個生命週期的全面且可信的追溯措施。註冊、驗證、發行、披露、交易和註銷都是可追溯的。整個交易過程透明，每個步驟都有可驗證的節點。
       
     # testimonial item loop
     - name : 多系統驗證
-      image : images/client/recs.jpg
+      image : images/client/recs.webp
       image_webp : images/client/recs.webp
       content : 與多個證書系統同步驗證，包括國內節能證書和I-REC數據。每個綠色證書都是獨特且真實的，防止重複計算，同時確保隱私和跨境交易能力。
