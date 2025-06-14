@@ -68,28 +68,24 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 设置主图片加载完成后的处理
   mainImage.onload = function() {
-    console.log('Main image loaded:', this.src);
     mainImageLoaded = true;
     updateBackground();
   };
   
   // 设置主图片加载失败的处理
   mainImage.onerror = function() {
-    console.error('Failed to load main image:', this.src);
     mainImageLoaded = false;
     updateBackground();
   };
   
   // 设置临时图片加载完成后的处理
   tempImage.onload = function() {
-    console.log('Temp image loaded:', this.src);
     tempImageLoaded = true;
     updateBackground();
   };
   
   // 设置临时图片加载失败的处理
   tempImage.onerror = function() {
-    console.error('Failed to load temp image:', this.src);
     tempImageLoaded = false;
     updateBackground();
   };
@@ -97,9 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // 开始加载图片
   const mainImageUrl = homeSection.dataset.bgImage;
   const tempImageUrl = homeSection.dataset.tempBgImage;
-  
-  console.log('Loading main image:', mainImageUrl);
-  console.log('Loading temp image:', tempImageUrl);
   
   // 先加载临时图片
   tempImage.src = tempImageUrl;

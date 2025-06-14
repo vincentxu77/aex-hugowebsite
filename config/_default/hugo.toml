@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
-#baseURL = "/aex-website/"
-baseURL = "/"
+baseURL = "/aex-website/"
+#baseURL = "/"
 title = "aex"
 theme = "meghna-hugo"
 disableImageProcessing = true
