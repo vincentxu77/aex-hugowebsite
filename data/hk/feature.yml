@@ -1,26 +1,27 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/spotMarket.png
-  title : We’re A Digital Design Agency.
-  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi."
+  image : images/about/spotMarket.jpg
+  image_webp : images/about/spotMarket.jpg
+  title : 中國碳排放與電力市場
+  content : "AEX致力於幫助建立這個生態系統，為中國碳排放和電力市場的成功做出貢獻。在成熟的碳排放和電力市場中，現貨市場嵌入在一個生態系統中，使市場參與者能夠管理風險並運行高效的交易操作。"
   feature_item : 
       # feature item loop
-    - title : SEO Optimized
-      icon : ti-world # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : 市場基礎設施
+      icon : ti-stats-up
+      content : 建立強大的市場基礎設施，支持現貨和遠期交易，確保高效的價格發現和市場流動性
       
       # feature item loop
-    - title : Easy Customization
-      icon : ti-panel # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
-
-      # feature item loop
-    - title : SEO Optimized
-      icon : ti-stats-up # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : 風險管理
+      icon : ti-world
+      content : 開發全面的風險管理工具和解決方案，幫助市場參與者應對市場波動並有效管理其倉位
       
       # feature item loop
-    - title : Easy Customization
-      icon : ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title : 市場整合
+      icon : ti-panel
+      content : 創建現貨和遠期市場之間的無縫整合，使參與者能夠優化其跨不同時間範圍的交易策略
+      
+      # feature item loop
+    - title : 市場情報
+      icon : ti-announcement
+      content : 提供先進的分析和市場洞察，支持明智的決策制定並提高交易效率

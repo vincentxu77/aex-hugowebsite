@@ -83,6 +83,7 @@ function updateNavbarStyle() {
     const nav = document.getElementById('mainNav');
     const scrollPosition = window.scrollY;
     const maxScroll = window.innerHeight * 0.7; // 70vh
+    const isMobile = window.innerWidth <= 991; // 添加移动端判断
     
     // 计算透明度，从0.2开始，最大到0.98
     const opacity = 0.2 + (Math.min(scrollPosition / maxScroll, 1) * 0.78);
@@ -94,8 +95,8 @@ function updateNavbarStyle() {
     const activeLink = document.querySelector('.navbar-dark .navbar-nav .nav-link.active');
     const inactiveLinks = document.querySelectorAll('.navbar-dark .navbar-nav .nav-link:not(.active)');
     
-    if (scrollPosition >= maxScroll) {
-        // 滚动超过70vh时
+    if (scrollPosition >= maxScroll || isMobile) {
+        // 滚动超过70vh时或移动端时
         if (activeLink) {
             activeLink.style.setProperty('color', '#4CAF50', 'important');
         }
@@ -103,7 +104,7 @@ function updateNavbarStyle() {
             link.style.setProperty('color', '#000', 'important');
         });
     } else {
-        // 滚动小于70vh时
+        // 滚动小于70vh时且非移动端
         if (activeLink) {
             activeLink.style.setProperty('color', '#00ff0a', 'important');
         }
@@ -118,6 +119,12 @@ window.addEventListener('scroll', updateNavbarStyle);
 
 // 页面加载时立即执行一次
 document.addEventListener('DOMContentLoaded', function() {
+    // 设置默认选中 home 链接
+    const homeLink = document.querySelector('.navbar-nav .nav-link[href="#home"]');
+    if (homeLink) {
+        homeLink.classList.add('active');
+    }
+    
     // 立即执行一次
     updateNavbarStyle();
     
@@ -135,17 +142,38 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         });
     });
+
+    // 点击导航栏外区域自动收起
+    const navbar = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    document.addEventListener('click', function(event) {
+        const isClickInside = navbar.contains(event.target) || navbarToggler.contains(event.target);
+        
+        if (!isClickInside && navbar.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    });
 });
 
 function switchLanguage() {
   const currentLang = '{{ .Site.Language.Lang }}';
   const currentPath = window.location.pathname;
   const newLang = currentLang === 'en' ? 'hk' : 'en';
+  const baseURL = '{{ .Site.BaseURL }}';
   
-  // 移除当前语言前缀
+  // 移除当前语言前缀和 baseURL
   let newPath = currentPath.replace(/^\/(en|hk)/, '');
-  // 添加新语言前缀
-  newPath = '/' + newLang + newPath;
+  newPath = newPath.replace(baseURL, '');
+  
+  // 根据目标语言构建新路径
+  if (newLang === 'en') {
+    // 英文版本直接使用 baseURL
+    newPath = baseURL + newPath;
+  } else {
+    // 中文版本添加 /hk 前缀
+    newPath = baseURL + 'hk/' + newPath;
+  }
   
   window.location.href = newPath;
 }

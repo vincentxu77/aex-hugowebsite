@@ -1,9 +1,13 @@
 {{ $data := index site.Data site.Language.Lang }} {{ if
 $data.home.home.enable }} {{ with $data.home.home }} {{"<!-- Welcome Slider-->"
 | safeHTML}}
+{{ $bg_image := resources.Get .bg_image_webp }}
+{{ $temp_bg_image := resources.Get .temp_bg_image_webp }}
 <section
   id="home"
-  class="home" {{ partial `bg-image.html` (dict `Src` .bg_image_webp) | safeHTMLAttr }}
+  class="home" {{ partial `bg-image.html` (dict `Src` .temp_bg_image_webp) | safeHTMLAttr }}
+  data-bg-image="{{ if $bg_image }}{{ $bg_image.RelPermalink }}{{ else }}{{ .bg_image_webp | relURL }}{{ end }}"
+  data-temp-bg-image="{{ if $temp_bg_image }}{{ $temp_bg_image.RelPermalink }}{{ else }}{{ .temp_bg_image_webp | relURL }}{{ end }}"
 >
   {{ partial "image" (dict "Src" .bg_image_webp "Alt"
   .Title "Class" "d-none") }}
@@ -22,10 +26,89 @@ $data.home.home.enable }} {{ with $data.home.home }} {{"<!-- Welcome Slider-->"
     <p class="animate-content">{{ .content | markdownify }}</p>
   </div>
 
+  <style>
+    @media (max-width: 1325px) {
+      .animate-title span:nth-child(12) {
+        display: block !important;
+        margin-top: 5px !important;
+      }
+      
+      .home .block h1 span:first-child {
+        margin-left: 14px !important;
+      }
+    
+      .home .block h1 span:nth-child(11) {
+        margin-right: 14px !important;
+      }
+    }
+  </style>
+
   {{ if .button.enable }} {{ with .button }}
   <div class="home-button-wrapper">
     <a href="{{ .link }}" class="btn btn-primary btn-animate page-scroll">{{ .label }}</a>
   </div>
   {{ end }} {{ end }}
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const homeSection = document.getElementById('home');
+  const mainImage = new Image();
+  const tempImage = new Image();
+  let mainImageLoaded = false;
+  let tempImageLoaded = false;
+  
+  function updateBackground() {
+    if (mainImageLoaded) {
+      homeSection.style.backgroundImage = `url(${mainImage.src})`;
+    } else if (tempImageLoaded) {
+      homeSection.style.backgroundImage = `url(${tempImage.src})`;
+    }
+  }
+  
+  // 设置主图片加载完成后的处理
+  mainImage.onload = function() {
+    console.log('Main image loaded:', this.src);
+    mainImageLoaded = true;
+    updateBackground();
+  };
+  
+  // 设置主图片加载失败的处理
+  mainImage.onerror = function() {
+    console.error('Failed to load main image:', this.src);
+    mainImageLoaded = false;
+    updateBackground();
+  };
+  
+  // 设置临时图片加载完成后的处理
+  tempImage.onload = function() {
+    console.log('Temp image loaded:', this.src);
+    tempImageLoaded = true;
+    updateBackground();
+  };
+  
+  // 设置临时图片加载失败的处理
+  tempImage.onerror = function() {
+    console.error('Failed to load temp image:', this.src);
+    tempImageLoaded = false;
+    updateBackground();
+  };
+  
+  // 开始加载图片
+  const mainImageUrl = homeSection.dataset.bgImage;
+  const tempImageUrl = homeSection.dataset.tempBgImage;
+  
+  console.log('Loading main image:', mainImageUrl);
+  console.log('Loading temp image:', tempImageUrl);
+  
+  // 先加载临时图片
+  tempImage.src = tempImageUrl;
+  
+  // 然后加载主图片
+  setTimeout(() => {
+    mainImage.src = mainImageUrl;
+  }, 100);
+});
+</script>
+
 {{"<!-- /Welcome Slider-->" | safeHTML}} {{end}} {{end}}

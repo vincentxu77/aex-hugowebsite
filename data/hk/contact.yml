@@ -1,14 +1,14 @@
 ############################## Contact #############################
 contact:
   enable : true
-  title : Contact Us
-  subtitle : Contact Details
-  content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.
+  title : 聯繫我們
+  subtitle : 職業機會
+  content : 我們正在尋找具有創業精神的候選人加入我們在香港和中國大陸的國際團隊。請將您的申請發送給我們。
 
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Khaja Road, Bayzid, Chittagong, Bangladesh"
+      info : "香港和中國大陸"
       
     - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
       info : "Phone: +880-31-000-000"
@@ -17,15 +17,15 @@ contact:
       info : "Fax: +880-31-000-000"
       
     - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      info : "Email: hello@meghna.com"
+      info : "電子郵件：recruiting@aexmarkets.com"
 
 
   # Contact form
   contact_form:
     enable : true
     form_action : "#" #contact form works with https://formspree.io
-    name : "votre nom"
-    email : "Votre email"
-    subject : "Matière"
-    message : "Message"
-    submit : "Soumettre"
+    name : "您的姓名"
+    email : "您的電子郵件"
+    subject : "主題"
+    message : "訊息"
+    submit : "提交"

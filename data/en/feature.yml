@@ -1,8 +1,8 @@
 ############################# feature ###################################
 feature:
   enable : true
-  image : images/about/spotMarket.png
-  image_webp : images/about/spotMarket.png
+  image : images/about/spotMarket.jpg
+  image_webp : images/about/spotMarket.jpg
   title : China's Emissions & Power Market
   content : "AEX is committed to help build this ecosystem to contribute to the success of China emissions and power markets. In mature emissions and power markets, the spot market is embedded in an ecosystem that enables market participants to manage risk and run efficient trading operations."
   feature_item : 

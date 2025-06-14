@@ -3,6 +3,19 @@
 {{ if $data.team.team.enable }}
 {{ with $data.team.team }}
 {{"<!-- Start Our Team -->" | safeHTML}}
+<style>
+@media (max-width: 768px) {
+  .team-member {
+    padding: 0 20px;
+  }
+  .member-meta {
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+}
+</style>
 <section id="team" class="section">
   <div class="container">
     <div class="row justify-content-center">
@@ -24,7 +37,7 @@
             {{"<!-- member photo -->" | safeHTML}}
             {{ partial "image.html" (dict "Src" .image_webp "Alt" .name "Class" "img-fluid lozad" ) }}
             {{"<!-- member social profile -->" | safeHTML}}
-            <div class="mask">
+            <div class="mask" style="display: none;">
               <ul class="list-inline">
                 {{ range .social }}
                 <li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>

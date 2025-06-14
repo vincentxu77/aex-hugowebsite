@@ -5,13 +5,13 @@
 			<div class="col-xl-12">
 
 				{{"<!-- Footer Social Links -->" | safeHTML}}
-				<div class="social-icon">
+				{{/*  <div class="social-icon">
 					<ul class="list-inline">
 						{{ range site.Params.social }}
 						<li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
 						{{ end }}
 					</ul>
-				</div>
+				</div>  */}}
 
 				{{"<!-- copyright -->" | safeHTML}}
 				<div class="copyright text-center">
@@ -47,21 +47,4 @@
 <div id="js-cookie-box" class="cookie-box cookie-box-hide">
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
 </div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		const cookieExpireDays = {{ site.Params.cookies.expire_days | default 365 }};
-		
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires: cookieExpireDays
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
 {{ end }}
