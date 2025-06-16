@@ -8,12 +8,12 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 */
 /*=== MEDIA QUERY ===*/
 html {
-  background-color: #f5f7f6;
+  background-color: #fafbfa;
   color: #4a4a4a;
 }
 
 body {
-  background-color: #f0f5f3;
+  background-color: #f8faf9;
   font-family: "Anaheim", sans-serif;
   color: #4a4a4a;
   -webkit-font-smoothing: antialiased;
@@ -164,15 +164,15 @@ a:hover {
 }
 
 .bg-one {
-  background-color: #f0f5f3;
+  background-color: #f8faf9;
 }
 
 .bg-dark {
-  background: #e8f0ed;
+  background: #f5f9f7;
 }
 
 .parallax-section {
-  background: linear-gradient(135deg, #f5f7f6 0%, #e8f0ed 100%);
+  background: linear-gradient(135deg, #fafbfa 0%, #f5f9f7 100%);
 }
 
 .no-padding {
@@ -266,8 +266,9 @@ a:hover {
 }
 
 #home {
+  padding-top: 81px;
+  padding-bottom: 120px;
   position: relative;
-  padding-top: 80px;
 }
 
 .btn.active:focus,
@@ -2371,7 +2372,7 @@ figcaption {
 
 /* 添加渐变背景 */
 .parallax-section {
-  background: linear-gradient(135deg, #f5f7f6 0%, #e8f0ed 100%);
+  background: linear-gradient(135deg, #fafbfa 0%, #f5f9f7 100%);
 }
 
 /* 更新卡片背景 */

@@ -2,110 +2,141 @@
 $data.home.home.enable }} {{ with $data.home.home }} {{"<!-- Welcome Slider-->"
 | safeHTML}}
 {{ $bg_image_webp := printf "images/backgrounds/%s" (path.Base .bg_image_webp) | relURL }}
-{{ $temp_bg_image_webp := printf "images/backgrounds/%s" (path.Base .temp_bg_image_webp) | relURL }}
-<section
-  id="home"
-  class="home" {{ partial `bg-image.html` (dict `Src` .temp_bg_image_webp) | safeHTMLAttr }}
-  data-bg-image="{{ $bg_image_webp }}"
-  data-temp-bg-image="{{ $temp_bg_image_webp }}"
->
-  {{ partial "image" (dict "Src" .bg_image_webp "Alt"
-  .Title "Class" "d-none") }}
 
-  <div class="block">
-    {{ if .icon }}
-    <div class="video-button">
-      <i class="{{ .icon }}"></i>
+<section id="home" class="home-section">
+  <div class="home-content">
+    <div class="content-wrapper">
+      <p class="animate-content">{{ .content | markdownify }}</p>
+      {{ if .button.enable }} {{ with .button }}
+      <a href="{{ .link }}" class="btn btn-primary btn-animate page-scroll">{{ .label }}</a>
+      {{ end }} {{ end }}
     </div>
-    {{ end }}
-    <h1 class="animate-title">
-      {{ range $index, $char := split .title "" }}
-        <span style="--char-index: {{ $index }}">{{ if eq $char " " }}&nbsp;{{ else }}{{ $char }}{{ end }}</span>
-      {{ end }}
-    </h1>
-    <p class="animate-content">{{ .content | markdownify }}</p>
   </div>
-
-  <style>
-    @media (max-width: 1325px) {
-      .animate-title span:nth-child(12) {
-        display: block !important;
-        margin-top: 5px !important;
-      }
-      
-      .home .block h1 span:first-child {
-        margin-left: 14px !important;
-      }
-    
-      .home .block h1 span:nth-child(11) {
-        margin-right: 14px !important;
-      }
-
-      .home-button-wrapper {
-        bottom: 175px;
-      }
-    }
-  </style>
-
-  {{ if .button.enable }} {{ with .button }}
-  <div class="home-button-wrapper">
-    <a href="{{ .link }}" class="btn btn-primary btn-animate page-scroll">{{ .label }}</a>
+  <div class="home-bg-image">
+    {{ partial "image" (dict "Src" .bg_image_webp "Alt" .Title "Class" "main-image") }}
   </div>
-  {{ end }} {{ end }}
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const homeSection = document.getElementById('home');
-  const mainImage = new Image();
-  const tempImage = new Image();
-  let mainImageLoaded = false;
-  let tempImageLoaded = false;
-  
-  function updateBackground() {
-    if (mainImageLoaded) {
-      homeSection.style.backgroundImage = `url(${mainImage.src})`;
-    } else if (tempImageLoaded) {
-      homeSection.style.backgroundImage = `url(${tempImage.src})`;
-    }
+<style>
+.home-section {
+  height: 100vh;
+  padding-top: 81px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  box-sizing: border-box;
+}
+
+.home-content {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+}
+
+.content-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-bg-image {
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.home-bg-image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.animate-content {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 990px) {
+  .home-section {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
   }
-  
-  // 设置主图片加载完成后的处理
-  mainImage.onload = function() {
-    mainImageLoaded = true;
-    updateBackground();
-  };
-  
-  // 设置主图片加载失败的处理
-  mainImage.onerror = function() {
-    mainImageLoaded = false;
-    updateBackground();
-  };
-  
-  // 设置临时图片加载完成后的处理
-  tempImage.onload = function() {
-    tempImageLoaded = true;
-    updateBackground();
-  };
-  
-  // 设置临时图片加载失败的处理
-  tempImage.onerror = function() {
-    tempImageLoaded = false;
-    updateBackground();
-  };
-  
-  // 开始加载图片
-  const mainImageUrl = homeSection.dataset.bgImage;
-  const tempImageUrl = homeSection.dataset.tempBgImage;
-  
-  // 先加载临时图片
-  tempImage.src = tempImageUrl;
-  
-  // 然后加载主图片
-  setTimeout(() => {
-    mainImage.src = mainImageUrl;
-  }, 100);
-});
-</script>
+
+  .home-content {
+    flex: 1;
+  }
+
+  .content-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .home-bg-image {
+    height: 100%;
+    margin-top: 2rem;
+  }
+
+  .home-bg-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 保留原有的动画相关样式 */
+.animate-content {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
 
 {{"<!-- /Welcome Slider-->" | safeHTML}} {{end}} {{end}}

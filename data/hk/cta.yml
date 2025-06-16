@@ -1,8 +1,8 @@
 ############################# call to action ##############################
 cta:
   enable : true
-  bg_image : "images/backgrounds/transition-base-map.webp"
-  bg_image_webp : "images/backgrounds/transition-base-map.webp"
+  # bg_image : "images/backgrounds/transition-base-map.webp"
+  # bg_image_webp : "images/backgrounds/transition-base-map.webp"
   title : "構建中國能源交易未來"
   content : "我們致力於為中國的碳排放和電力交易創建一個透明且受監管的遠期市場，引入國際標準和最佳實踐，以增強市場參與者的能力。"
   button:

@@ -95,23 +95,12 @@ function updateNavbarStyle() {
     const activeLink = document.querySelector('.navbar-dark .navbar-nav .nav-link.active');
     const inactiveLinks = document.querySelectorAll('.navbar-dark .navbar-nav .nav-link:not(.active)');
     
-    if (scrollPosition >= maxScroll || isMobile) {
-        // 滚动超过70vh时或移动端时
-        if (activeLink) {
-            activeLink.style.setProperty('color', '#4CAF50', 'important');
-        }
-        inactiveLinks.forEach(link => {
-            link.style.setProperty('color', '#000', 'important');
-        });
-    } else {
-        // 滚动小于70vh时且非移动端
-        if (activeLink) {
-            activeLink.style.setProperty('color', '#00ff0a', 'important');
-        }
-        inactiveLinks.forEach(link => {
-            link.style.setProperty('color', '#000', 'important');
-        });
+    if (activeLink) {
+        activeLink.style.setProperty('color', '#4CAF50', 'important');
     }
+    inactiveLinks.forEach(link => {
+        link.style.setProperty('color', '#000', 'important');
+    });
 }
 
 // 监听滚动事件
