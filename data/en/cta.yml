@@ -1,8 +1,6 @@
 ############################# call to action ##############################
 cta:
   enable : true
-  bg_image : "images/backgrounds/transition-base-map.webp"
-  bg_image_webp : "images/backgrounds/transition-base-map.webp"
   title : "Building China's Energy Trading Future"
   content : "We are committed to creating a transparent and regulated forward market for emissions and power trading in China, bringing international standards and best practices to empower market participants."
   button:
