@@ -9,60 +9,42 @@ team:
       image : images/team/jeff.webp
       designation : CEO/Founder
       content : Former Managing Director Greater China for international commodity exchange (2010-2016), VP Asia for Chicago Climate Exchange (CCX), Former Chief Advisor for Chongqing Gas Exchange. 10+ years experience in cross-border M&A and Joint Venture. Member of Greater-Bay Area (GBA) Carbon Connect Working Group. Well-known expert in China energy and CO2 markets.
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
         
     # team member loop
     - name : Sam GreenWood
       image_webp : images/team/sam.webp
       image : images/team/sam.webp
-      designation : Program Manager
+      designation : Interim AsiaREC CEO
       content : MBA from University of Hong Kong. Former US military veteran and Rio Tinto government relations specialist. Program manager for CryptoBLK and BCW Group. Founder of Apogee Labs, a web3 consulting firm focusing on corporate blockchain adoption and startup advisory services.
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
         
     # team member loop
-    - name : Leo Zhang
-      image_webp : images/team/leo.webp
-      image : images/team/leo.webp
-      designation : Technical Director
-      content : 20 years of expertise in cryptographic algorithms, electronic signatures, blockchain and carbon credits REC. Master of Beijing University of Technology. Engineer of Computer Network Information Center, Chinese Academy of Sciences. Founding member of BJCA (GEM listed company). Founder and CEO of Ai-Got.com. Member of TC260 WG4. Inventor of hardware digital wallet "SIM-Key Chip".
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
+    - name : Wu Qian
+      image_webp : images/team/qian.webp
+      image : images/team/qian.webp
+      designation : Chief of Strategy
+      content : Ms Qian Wu is Partner in Oliver Wyman's Beijing office, with 20 years consulting experience in climate change and sustainability. She is specialised in corporate net zero strategy, clean-tech investment and supply chain resilience. Previously worked at Computer Network Information Center, Chinese Academy of Sciences and founded Ai-Got.com.
+      
         
     # team member loop
-    - name : Jonas Nart
-      image_webp : images/team/najiean.webp
-      image : images/team/najiean.webp
-      designation : Founding Partner & VP Power Markets & Data Analytics
-      content : Former spot power trader and asset manager for Swiss generator. Senior consultant in energy industry trading and risk management. Former derivatives trader for Credit Suisse Investment Banking. 5 years experience in Shanghai and Singapore with fluent Chinese proficiency.
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
+    - name : Meng Meng
+      image_webp : images/team/meng.webp
+      image : images/team/meng.webp
+      designation : Director of IT
+      content : Mr. Meng worked at the Dalian Commodity Exchange, focusing on specialized business tasks for the trading system. Experienced in crypto and green energy marketing. Former derivatives trader for Credit Suisse Investment Banking with 5 years experience in Shanghai and Singapore.
+      
+  
+    # team member loop
+    - name : Guy Melamed
+      image_webp : images/team/melamed.webp
+      image : images/team/melamed.webp
+      designation : Senior Advisor
+      content : A seasoned fintech entrepreneur and strategic advisor with over 15 years of leadership in capital markets infrastructure and trading technology. Former Co-Founder and CEO of Exberry, leading next-generation exchange infrastructure solutions. Currently serves as Chairman of Mela Partners, advising stock exchanges globally on cloud deployment and AI integration.
+      
+
+    # team member loop
+    - name : Fu Chengyu
+      image_webp : images/team/chairman.webp
+      image : images/team/chairman.jpg
+      designation : Senior Advisor
+      content : Dr. Fu is the founder of the International Institute for Carbon Neutrality. Previously, he was the chairman and CEO of CNOOC, chairman of SINOPEC. A distinguished leader in the energy sector with extensive experience in oil and gas industry leadership and carbon neutrality initiatives.
+      

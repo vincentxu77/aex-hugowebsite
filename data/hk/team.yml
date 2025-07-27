@@ -9,60 +9,38 @@ team:
       image : images/team/jeff.webp
       designation : 首席執行官/創始人
       content : 曾任國際商品交易所大中華區董事總經理（2010-2016），芝加哥氣候交易所亞洲副總裁，重慶石油天然氣交易中心首席顧問。擁有10年以上跨境併購和合資企業經驗。粵港澳大灣區碳連接工作組成員。中國能源和二氧化碳市場知名專家。
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
         
     # team member loop
     - name : Sam GreenWood
       image_webp : images/team/sam.webp
       image : images/team/sam.webp
-      designation : 項目經理
+      designation : 亞洲REC臨時首席執行官
       content : 香港大學工商管理碩士。前美國軍人，力拓集團政府關係專家。CryptoBLK和BCW集團項目經理。Apogee Labs創始人，專注於企業區塊鏈應用和創業諮詢服務的web3諮詢公司。
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
         
     # team member loop
-    - name : 張繼東
-      image_webp : images/team/leo.webp
-      image : images/team/leo.webp
-      designation : 技術總監
-      content : 擁有20年密碼算法、電子簽名、區塊鏈和碳信用REC專業經驗。北京工業大學碩士。中國科學院計算機網絡信息中心工程師。BJCA（創業板上市公司）創始成員。Ai-Got.com創始人兼首席執行官。TC260 WG4成員。硬件數字錢包"SIM-Key芯片"發明者。
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
+    - name : 吳倩
+      image_webp : images/team/qian.webp
+      image : images/team/qian.webp
+      designation : 策略總監
+      content : 吳倩女士是奧緯諮詢北京辦事處合夥人，擁有20年氣候變化和可持續發展諮詢經驗。她專精於企業淨零策略、清潔技術投資和供應鏈韌性。曾在中國科學院計算機網絡信息中心工作，並創立了Ai-Got.com。
         
     # team member loop
-    - name : 納傑安
-      image_webp : images/team/najiean.webp
-      image : images/team/najiean.webp
-      designation : 創始合夥人兼電力市場與數據分析副總裁
-      content : 曾任瑞士發電商現貨電力交易員和資產經理。能源行業交易和風險管理高級顧問。前瑞士信貸投資銀行衍生品交易員。在上海和新加坡有5年工作經驗，精通中文。
-      social :
-        - icon : ti-facebook
-          link : "#"
-        - icon : ti-twitter-alt
-          link : "#"
-        - icon : ti-linkedin
-          link : "#"
-        - icon : ti-dribbble
-          link : "#"
+    - name : 蒙檬
+      image_webp : images/team/meng.webp
+      image : images/team/meng.webp
+      designation : 資訊技術總監
+      content : 孟先生曾在大連商品交易所工作，專注於交易系統的專業業務任務。在加密貨幣和綠色能源營銷方面經驗豐富。前瑞士信貸投資銀行衍生品交易員，在上海和新加坡有5年工作經驗。
+        
+    # team member loop
+    - name : Guy Melamed
+      image_webp : images/team/melamed.webp
+      image : images/team/melamed.webp
+      designation : 資深顧問
+      content : 一位經驗豐富的金融科技企業家和策略顧問，在資本市場基礎設施和交易技術方面擁有超過15年的領導經驗。前Exberry聯合創始人兼首席執行官，領導下一代交易所基礎設施解決方案。目前擔任Mela Partners主席，為全球證券交易所提供雲端部署和人工智能整合諮詢。
+        
+    # team member loop
+    - name : 傅成玉
+      image_webp : images/team/chairman.webp
+      image : images/team/chairman.jpg
+      designation : 資深顧問
+      content : 傅博士是國際碳中和研究所創始人。此前，他曾擔任中國海洋石油集團有限公司董事長兼首席執行官，中國石油化工集團有限公司董事長。能源領域的傑出領導者，在石油天然氣行業領導和碳中和倡議方面擁有豐富經驗。
