@@ -43,8 +43,8 @@ team:
 
     # team member loop
     - name : Fu Chengyu
-      image_webp : images/team/chairman.webp
-      image : images/team/chairman.jpg
+      image_webp : images/team/chengyu.webp
+      image : images/team/chengyu.webp
       designation : Senior Advisor
       content : Dr. Fu is the founder of the International Institute for Carbon Neutrality. Previously, he was the chairman and CEO of CNOOC, chairman of SINOPEC. A distinguished leader in the energy sector with extensive experience in oil and gas industry leadership and carbon neutrality initiatives.
       

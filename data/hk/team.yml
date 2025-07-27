@@ -40,7 +40,7 @@ team:
         
     # team member loop
     - name : 傅成玉
-      image_webp : images/team/chairman.webp
-      image : images/team/chairman.jpg
+      image_webp : images/team/chengyu.webp
+      image : images/team/chengyu.webp
       designation : 資深顧問
       content : 傅博士是國際碳中和研究所創始人。此前，他曾擔任中國海洋石油集團有限公司董事長兼首席執行官，中國石油化工集團有限公司董事長。能源領域的傑出領導者，在石油天然氣行業領導和碳中和倡議方面擁有豐富經驗。
