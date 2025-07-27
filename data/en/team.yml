@@ -14,7 +14,7 @@ team:
     - name : Sam GreenWood
       image_webp : images/team/sam.webp
       image : images/team/sam.webp
-      designation : Interim AsiaREC CEO
+      designation : AsiaREC CEO
       content : MBA from University of Hong Kong. Former US military veteran and Rio Tinto government relations specialist. Program manager for CryptoBLK and BCW Group. Founder of Apogee Labs, a web3 consulting firm focusing on corporate blockchain adoption and startup advisory services.
         
     # team member loop
@@ -22,7 +22,7 @@ team:
       image_webp : images/team/qian.webp
       image : images/team/qian.webp
       designation : Chief of Strategy
-      content : Ms Qian Wu is Partner in Oliver Wyman's Beijing office, with 20 years consulting experience in climate change and sustainability. She is specialised in corporate net zero strategy, clean-tech investment and supply chain resilience. Previously worked at Computer Network Information Center, Chinese Academy of Sciences and founded Ai-Got.com.
+      content : Ms. Qian Wu is Partner in Oliver Wyman's Beijing office, with 20 years consulting experience in climate change and sustainability. She is specialised in corporate net zero strategy, clean-tech investment and supply chain resilience. Previously worked at Computer Network Information Center, Chinese Academy of Sciences and founded Ai-Got.com.
       
         
     # team member loop

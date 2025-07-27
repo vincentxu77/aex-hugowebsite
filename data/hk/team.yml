@@ -14,7 +14,7 @@ team:
     - name : Sam GreenWood
       image_webp : images/team/sam.webp
       image : images/team/sam.webp
-      designation : 亞洲REC臨時首席執行官
+      designation : AsiaREC首席執行官
       content : 香港大學工商管理碩士。前美國軍人，力拓集團政府關係專家。CryptoBLK和BCW集團項目經理。Apogee Labs創始人，專注於企業區塊鏈應用和創業諮詢服務的web3諮詢公司。
         
     # team member loop
@@ -28,8 +28,8 @@ team:
     - name : 蒙檬
       image_webp : images/team/meng.webp
       image : images/team/meng.webp
-      designation : 資訊技術總監
-      content : 孟先生曾在大連商品交易所工作，專注於交易系統的專業業務任務。在加密貨幣和綠色能源營銷方面經驗豐富。前瑞士信貸投資銀行衍生品交易員，在上海和新加坡有5年工作經驗。
+      designation : 信息技術總監
+      content : 蒙先生曾在大連商品交易所工作，專注於交易系統的專業業務任務。在加密貨幣和綠色能源營銷方面經驗豐富。前瑞士信貸投資銀行衍生品交易員，在上海和新加坡有5年工作經驗。
         
     # team member loop
     - name : Guy Melamed
